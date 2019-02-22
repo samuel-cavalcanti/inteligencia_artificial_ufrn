@@ -3,7 +3,6 @@ import json
 import os
 import time
 import copy
-from tree import Tree
 class Graph :
 
     _title = "Mapa da Romênia simplificado"
@@ -99,7 +98,7 @@ class Graph :
 
 # pseudocódigo retirado da wikipedia
 # wikipedia: https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search
-    def interativeDeepeningSearch(self,origin,goal_node,limit_max):
+    def iterativeDeepeningSearch(self,origin,goal_node,limit_max):
        
         for depth in range(limit_max):
             found, remaining = self.depthLimitedSearch(origin,goal_node,depth,origin)

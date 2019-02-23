@@ -14,4 +14,4 @@ pip install json
 ````
 
 - [x] implementado Iterative Deepening Search
-- [ ] implementado A __*__
+- [x] implementado A __*__

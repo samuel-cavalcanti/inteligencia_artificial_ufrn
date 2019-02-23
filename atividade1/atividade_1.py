@@ -4,6 +4,8 @@ if __name__ == "__main__":
     graph = Graph("graph.json")
     depth = 5
     ids_path,ids_cost = graph.iterativeDeepeningSearch("Arad","Bucharest",depth)
+    #visualizar nodos visitados no gráfico
+    graph.setDebug(True)
     star_path, star_cost = graph.Astar("Arad","Bucharest")
 
     print("IDS path",ids_path)
@@ -11,3 +13,4 @@ if __name__ == "__main__":
     print("A* path",star_path)
     print("A* cost",star_cost)
     graph.print()
+    

@@ -25,7 +25,7 @@ class Node:
 class Graph :
 
     _title = "Mapa da Romênia simplificado"
-
+    _debug = False
     def __init__(self, fileName):
         graph_json = json.load(open(fileName)) 
 
@@ -162,7 +162,9 @@ class Graph :
 
     def depthLimitedSearch(self,node,goal_node,depth,father):
         if depth == 0: 
-            # self.changeNodeColor(node,"red") # visualização
+            if self._debug:
+                self.changeNodeColor(node,"red") # visualização
+            
             if node == goal_node:
                 return 0 , True , [node]
 
@@ -215,7 +217,9 @@ class Graph :
             if current_node is None:
                 return None
             #para visualização
-            # self.changeNodeColor(current_node,"Red")
+            if self._debug:
+                self.changeNodeColor(current_node,"Blue")
+           
             
             if current_node ==goal:
                 self._star_cost = gScore[goal] # para visualização
@@ -227,8 +231,9 @@ class Graph :
                 if closed_set[neighbor]:
                      continue
                 tentative_gScore = gScore[current_node] + self.getCust(current_node,neighbor)
-
-                
+                print("current",current_node)
+                print("\tneighbor",neighbor)
+                print("\tdistancia",tentative_gScore + self.getLineDistance(neighbor))
                 if tentative_gScore < gScore[neighbor]:
                     cameFrom[neighbor] = current_node
                     gScore[neighbor] = tentative_gScore
@@ -275,4 +280,8 @@ class Graph :
             next_node = heapq.heappop(open_set)
 
         return next_node.name
-       
+    
+#visualizar nodos visitados
+    def setDebug(self, debug):
+        self._debug = debug
+        pass

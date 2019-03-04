@@ -19,3 +19,7 @@ pip install json
 
 - [x] implementado algoritmo genetico
 - [ ] relatório :cry:
+
+![](projetoDaUnidade1/gráficos/Rastrigin_Por_Interacao.png "melhor Individuo por interação")
+
+Gráfico 1: Melhor Indivíduo por interação

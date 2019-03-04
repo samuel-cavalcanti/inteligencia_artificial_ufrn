@@ -15,3 +15,7 @@ pip install json
 
 - [x] implementado Iterative Deepening Search
 - [x] implementado A __*__
+## Projeto Primeira Unidade
+
+- [x] implementado algoritmo genetico
+- [ ] relatório :cry:

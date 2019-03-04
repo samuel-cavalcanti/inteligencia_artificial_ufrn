@@ -26,13 +26,18 @@ Gráfico 1: Melhor Indivíduo por interação
 
 ### informações sobre a implemntação
 
-parâmetro                |valor ou atributo escolhido
--------------------------|---------------------------
-codificação              | pro valor
-tipo de seleção          | Torneio
-tipo de cruzamento       | Cruzamento Multi-Pontos
-tipo de substituição     | Substituição com estado fixo
-taxa de cruzamento       | 2/3 da população total
-tamanho da população     | 5 indivíduos
-taxa de mutação          | 0.03
-Critéiro de parada       | Melhor Individuo atingir o valor esperado
+parâmetro                          |valor ou atributo escolhido
+-----------------------------------|---------------------------
+Codificação                        | Pro valor
+Tipo de seleção                    | Torneio
+Tipo de cruzamento                 | Cruzamento Multi-Pontos
+Tipo de substituição               | Substituição com estado fixo
+Taxa de cruzamento                 | 2/3 da população total
+Tamanho da população               | 5 indivíduos
+Taxa de mutação                    | 0.03
+Critéiro de parada                 | Melhor Indivíduo atingir o valor esperado
+__*__ Média de interações          | 254 interações
+__*__ Desvio padrão                | 147 interações
+
+__*__ foram executadas 30 vezes o algoritmo nas mesmas condições para  
+serem geradas as informações marcadas com __*__

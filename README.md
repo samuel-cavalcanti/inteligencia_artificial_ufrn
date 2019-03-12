@@ -20,7 +20,7 @@ pip install json
 - [x] implementado algoritmo genetico
 - [ ] relatório :cry:
 
-![](projetoDaUnidade1/gráficos/Rastrigin_Por_Interacao.png "melhor Individuo por interação")
+![ ](projetoDaUnidade1/gráficos/Rastrigin_Por_Interacao.png "melhor Individuo por interação")
 
 Gráfico 1: Melhor Indivíduo por interação
 
@@ -36,8 +36,8 @@ Taxa de cruzamento                 | 2/3 da população total
 Tamanho da população               | 5 indivíduos
 Taxa de mutação                    | 0.03
 Critéiro de parada                 | Melhor Indivíduo atingir o valor esperado
-__*__ Média de interações          | 254 interações
-__*__ Desvio padrão                | 147 interações
+__*__ Média de interações          | 3315 interações
+__*__ Desvio padrão                | 1029 interações
 
-__*__ foram executadas 30 vezes o algoritmo nas mesmas condições para  
+__*__ foram executadas 100 vezes o algoritmo nas mesmas condições para  
 serem geradas as informações marcadas com __*__

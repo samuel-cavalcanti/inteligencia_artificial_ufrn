@@ -1,4 +1,5 @@
-from geneticAlgorithm import np ,Individuals ,GeneticAlgorithm
+from geneticAlgorithm import Individuals ,GeneticAlgorithm
+import numpy as np
 import matplotlib.pyplot as plt
 
 def rastrigin(X):
@@ -8,7 +9,7 @@ def rastrigin(X):
 
 def InitializePopulation(size_population,ndim,limit_value):
     population = list()
-    # env.observation_space.n
+ 
     for i  in range(size_population):
         population.append(Individuals(ndim,limit_value,-limit_value,float))
 
@@ -27,30 +28,37 @@ def executeAG(size_population=5,ndim=2,limit_value=5000):
         it+=1
         all_it.append(it)
         all_score.append(solution.score)
+       
     
    
-    return  np.array(all_it) , np.array(all_score)
+    return it , np.array(all_score)
+
+def benckmarkAG(n=30,plot_best_score=False):
+    total_it = list()
+    total_score = list()
+    for i in range(n):
+        it , score = executeAG()
+        total_it.append(it)
+        total_score.append(score)
+    
+    total_it = np.array(total_it)
+    best_score_index = total_it.argmin()
+
+    if plot_best_score:
+        plt.plot(total_score[best_score_index])
+        plt.ylabel("Best Individual")
+        plt.xlabel("iteration")
+        plt.title("Best Result")
+        plt.savefig("gráficos/Rastrigin_Por_Interacao.png",)
+        plt.show()
+
+        
+    #/home/samuel/Documents/Repositories/atividades_IA/projetoDaUnidade1/gráficos
+    return total_it.mean() , total_it.std()
 
 
 if __name__ == '__main__':
-    total_it = list()
-    total_score = list()
-    for i in range(30):
-     list_it, list_score =  executeAG()
-     total_it.append(list_it)
-     total_score.append(list_score)
+    # mean , std = benckmarkAG(n=100,plot_best_score=True)
+    # print("mean:",mean,"std:",std) # mean: 3315.01 std: 1028.5962521320014
 
-    total_it = np.array(total_it)
-    total_score = np.array(total_score)
-
-
-    print(total_it[:,-1].mean())
-    print(total_it[:,-1])
-
-    # plt.plot(all_it,all_score)
-    # plt.ylabel("rastrigin")
-    # plt.xlabel("iteration")
-    # plt.show()
-
- 
     pass

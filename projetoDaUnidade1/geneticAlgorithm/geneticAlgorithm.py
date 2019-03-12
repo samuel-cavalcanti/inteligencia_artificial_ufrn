@@ -1,4 +1,4 @@
-from individuals import Individuals ,np
+from .individuals import Individuals , np
 class GeneticAlgorithm:
     _mutation_rate = 0.03
 
@@ -11,7 +11,8 @@ class GeneticAlgorithm:
      
       self.best_individuals = self._getBestIndividuals(population)
       self.best_individuals.wasChosen = False
-     
+      
+      # self._min , self._max = self._find
    
 
     def _selectParents(self, n_parents):
@@ -123,27 +124,17 @@ class GeneticAlgorithm:
         childrens.extend([self._Mutate(child_1),self._Mutate(child_2)])
         i +=2
         
-      
       return childrens
     
 
     def _replace(self,childrens):
       
-
       self.population.extend(childrens)
       
-      worse_individuals_list = list()
-
       for i in range(len(childrens)):
-       worse_individuals_list.append(self._getWorseIndividuals(self.population))
+       worse = self._getWorseIndividuals(self.population)
+       self.population.remove(worse)
       
-      for worse in worse_individuals_list:
-        self.population.remove(worse)
-     
-      import time
-
-    
-
      
 
     def _Mutate(self, children):
@@ -161,9 +152,9 @@ class GeneticAlgorithm:
 
 
       end_point = increment
-      child_1_chromosome = np.zeros(shape=father.chromosome.size,dtype=int)
+      child_1_chromosome = np.zeros(shape=father.chromosome.size,dtype=father.chromosome.dtype)
 
-      child_2_chromosome = np.zeros(shape=father.chromosome.size,dtype=int)
+      child_2_chromosome = np.zeros(shape=father.chromosome.size,dtype=father.chromosome.dtype)
 
       switch = True
 
@@ -182,7 +173,26 @@ class GeneticAlgorithm:
       return Individuals.numpy(child_1_chromosome) , Individuals.numpy(child_2_chromosome)
 
     def _mutating(self, child):
-      for i in range(int(child.chromosome.size/5 +1)):
-        child.chromosome[ np.random.randint(0,child.chromosome.size) ] = np.random.randint(0,6)
+      best, worse = self._selectRandomIndividuals(len(self.population))
       
-    
+      max_value = best.chromosome.max()
+      min_value = worse.chromosome.min()
+
+
+      for i in range(int(child.chromosome.size/5 +1)):
+        self._mutateChromosome(child.chromosome,max_value,min_value)
+      
+        
+      
+    def _sumOrSubtract(self):
+      if np.random.uniform(0,1) < 0.5:
+        return -1
+      else:
+        return 1
+
+    def  _mutateChromosome(self,chromosome,max_value,min_value):
+        operation = self._sumOrSubtract()
+
+        index = np.random.randint(0,chromosome.size)
+
+        chromosome[ index ] =  ( max_value* np.random.rand() + min_value )* operation + chromosome[ index ]

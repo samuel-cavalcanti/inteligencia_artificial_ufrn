@@ -8,7 +8,7 @@ class Individuals:
         if type_value is int:    
              self.chromosome = np.random.randint(rand_value_min,rand_value_max,size_chromosome) 
         elif type_value is float:
-            self.chromosome = rand_value_max * np.random.rand(size_chromosome) + rand_value_min
+            self.chromosome =  (rand_value_max - rand_value_min) * np.random.rand(size_chromosome) + rand_value_min
         elif type_value is None:
             self.chromosome = None
         else:

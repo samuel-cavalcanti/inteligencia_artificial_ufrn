@@ -18,13 +18,12 @@ pip install json
 ## Projeto Primeira Unidade
 
 - [x] implementado algoritmo genetico
+- [x] implementado Simulated Annealing ( Recozimento Simulado)
 - [ ] relatório :cry:
 
-![ ](projetoDaUnidade1/gráficos/Rastrigin_Por_Interacao.png "melhor Individuo por interação")
 
-Gráfico 1: Melhor Indivíduo por interação
 
-### informações sobre a implemntação
+### informações sobre a implemntação do algoritmo genetico
 
 parâmetro                          |valor ou atributo escolhido
 -----------------------------------|---------------------------
@@ -41,3 +40,30 @@ __*__ Desvio padrão                | 1029 interações
 
 __*__ foram executadas 100 vezes o algoritmo nas mesmas condições para  
 serem geradas as informações marcadas com __*__
+
+### informações sobre a implemntação do Simulated Annealing  
+parâmetro                          |valor ou atributo 
+-----------------------------------|------------------
+temperatura inicial                | 100
+temperatura final                  | 0.000001
+número máximo de vizinhos          | 50
+fator de redução da temperatura    | 0.999
+__*__ Média de interações          | 168 interações
+__*__ Desvio padrão                | 53 interações  
+
+__*__ foram executadas 100 vezes o algoritmo nas mesmas condições para  
+serem geradas as informações marcadas com __*__  
+
+<img id="grafico1" src="projetoDaUnidade1/gráficos/Rastrigin_Por_Interacao.png">  
+  
+__Gráfico 1:__ Melhor Indivíduo por interação (algoritmo genético).  
+
+<img id="grafico2" src="projetoDaUnidade1/gráficos/recozimentoSimulado.png">  
+  
+__Gráfico 2:__ Melhor solução pro interação ( Recozimento Simulado )  
+
+#### OBS:
+Das 100 vezes executadas os algoritmos. Foi escolhido os melhores resultados  
+em relação ao número de interações para plotar o gráfico. Ou seja a mais rapida  
+execução do algoritmo genetico foi plotada no [gráfico 1](#grafico1).  
+A melhor execução do Recozimento Simulado foi plotada no [gráfico 2](#grafico2)

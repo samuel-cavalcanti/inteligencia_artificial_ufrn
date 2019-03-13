@@ -23,10 +23,24 @@ pip install numpy
 ````
 
 - [x] implementado Iterative Deepening Search
-- [x] implementado A __*__
+- [x] implementado A __*__ 
 
 
 ## atividade 2: Genetic Algorithm and Simulated Annealing
+foi utilizado os pacotes *numpy*, *matplotlib*
+
+__para instalar o python-numpy__
+
+````shell
+pip install numpy
+````
+
+
+__para instalar o python-numpy__
+
+````shell
+pip install matplotlib
+````
 
 - [x] implementado algoritmo genetico
 - [x] implementado Simulated Annealing ( Recozimento Simulado)

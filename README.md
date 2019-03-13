@@ -1,27 +1,35 @@
 # atividades_IA
 
-## atividade 1
+## atividade 1: A * search
 
-foi utilizado os pacotes *graphviz* e *json*
+foi utilizado os pacotes *graphviz* , *json* e *numpy*  
 
 __para instalar o python-graphviz__
+
 ````shell
 pip install graphviz
 ````
+
 __para instalar o python-json__
+
 ````shell
 pip install json
 ````
 
+__para instalar o python-numpy__
+
+````shell
+pip install numpy
+````
+
 - [x] implementado Iterative Deepening Search
 - [x] implementado A __*__
-## Projeto Primeira Unidade
+
+
+## atividade 2: Genetic Algorithm and Simulated Annealing
 
 - [x] implementado algoritmo genetico
 - [x] implementado Simulated Annealing ( Recozimento Simulado)
-- [ ] relatório :cry:
-
-
 
 ### informações sobre a implemntação do algoritmo genetico
 
@@ -41,7 +49,8 @@ __*__ Desvio padrão                | 1029 interações
 __*__ foram executadas 100 vezes o algoritmo nas mesmas condições para  
 serem geradas as informações marcadas com __*__
 
-### informações sobre a implemntação do Simulated Annealing  
+### informações sobre a implemntação do Simulated Annealing
+
 parâmetro                          |valor ou atributo 
 -----------------------------------|------------------
 temperatura inicial                | 100
@@ -54,11 +63,11 @@ __*__ Desvio padrão                | 53 interações
 __*__ foram executadas 100 vezes o algoritmo nas mesmas condições para  
 serem geradas as informações marcadas com __*__  
 
-<img id="grafico1" src="projetoDaUnidade1/gráficos/Rastrigin_Por_Interacao.png">  
+<img id="grafico1" src="atividade_2_Genetic_Algorithm_and_Simulated_Annealing/gráficos/Rastrigin_Por_Interacao.png">  
   
 __Gráfico 1:__ Melhor Indivíduo por interação (algoritmo genético).  
 
-<img id="grafico2" src="projetoDaUnidade1/gráficos/recozimentoSimulado.png">  
+<img id="grafico2" src="atividade_2_Genetic_Algorithm_and_Simulated_Annealing/gráficos/recozimentoSimulado.png">  
   
 __Gráfico 2:__ Melhor solução pro interação ( Recozimento Simulado )  
 

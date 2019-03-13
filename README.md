@@ -42,7 +42,7 @@ __para instalar o python-numpy__
 pip install matplotlib
 ````
 
-- [x] implementado algoritmo genetico
+- [x] implementado algoritmo genético
 - [x] implementado Simulated Annealing ( Recozimento Simulado)
 
 ### informações sobre a implemntação do algoritmo genetico

@@ -2,7 +2,7 @@ import numpy as np
 
 
 class Individuals:
-    score = 0
+    score = None
     wasChosen = False
 
     def __init__(self, size_chromosome=None, rand_value_max=None, rand_value_min=None, type_value=None):

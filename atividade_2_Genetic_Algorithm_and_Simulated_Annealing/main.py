@@ -70,7 +70,7 @@ def plot(title, xlabel, ylabel, filename, array):
     plt.title(title)
     plt.savefig(filename)
     plt.show()
-    plt.ion()
+   
 
 
 
